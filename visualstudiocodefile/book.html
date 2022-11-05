@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt sân</title>
+    <link rel="icon" type="images/football.png" href="images/football.png">
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+
+<body>
+    <p id="dautrang"></p>
+    <main>
+        <header id="header1">
+            <a href="index.html">
+                <img src="images/football.png" alt="trang chủ" width="20%">
+            </a>
+            <nav>
+                <div class="flex-container">
+                    <div class="box">
+                        <a href="index.html" class="menu-item">Trang chủ</a>
+                        <a href="gioithieu.html" target="_self" class="menu-item">Giới thiệu</a>
+                        <a href="chitiet.html" target="_self" class="menu-item"> Tìm sân</a>
+                        <a href="book.html" target="_self" class="menu-item"> Đặt sân</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="form">
+            
+            <form onsubmit="validate(e)">
+                <div>
+                    <h1>Thuê sân</h1>
+                    <select name="sanbong" id="dropmenu">
+                        <option>--chọn một sân--</option>
+                        <option value="sandhy">Sân bóng đại học y</option>
+                        <option value="sandm">Sân bóng đoan môn</option>
+                        <option value="santhloi">Sân bóng thuỷ lợi</option>
+                    </select><br>
+                    <br>
+                </div>
+                <div class="field-wrapper">
+                    <label for="name">Tên của bạn</label>
+                    <input type="text" name="name" id="name">
+                    <p id="errorName" class="errorRed"></p>
+                </div>
+
+                <div>
+                    <label for="sdt">Số điện thoại của bạn:</label>
+                    <input type="tel" name="sdt" id="sdt" maxlength="10">
+                    <p id="errorPhone" class="errorRed"></p>
+                </div>
+
+                <div>
+                    <label for="khunggio">Chọn khung giờ:</label>
+                    <select id="khunggio" name="khunggio" id="khunggio">
+                        <option value="">--- Chọn khung giờ ---</option>
+                        <option value="200000">6h-16h : 200k</option>
+                        <option value="300000">16h-17h30p : 300k</option>
+                        <option value="700000">17h30p-20h20p : 700k</option>
+                        <option value="300000">20h30p-22h : 300k</option>
+                    </select>
+                    <p id="errorKhunggio" class="errorRed"></p>
+                </div>
+                <br>
+                <div>
+                    <label>Số giờ thuê sân:</label>
+                    <input type="number" name="giothuesan" id="giothuesan" min="1" max="24">
+                    <p id="giothuesanError" class="errorRed"></p>
+                </div>
+
+                <div>
+                    <label>Số người chơi dự kiến:</label>
+                    <input type="number" name="nguoichoi" id="nguoichoi" min="7" max="11">
+                    <p id="nguoichoiError" class="errorRed"></p>
+                </div>
+
+                <div>
+                    <label>Số đội chơi dự kiến:</label>
+                    <input type="number" name="doichoi" id="doichoi">
+                </div>
+                <p id="doichoiError" class="errorRed"></p>
+                <div>
+                    <label>Đặt định kỳ:</label>
+                    <select id="datdinhky" name="datdinhky">
+                        <option value="">--- Không đặt ---</option>
+                        <option value="tuan">Hàng tuần</option>
+                        <option value="thang">Hàng tháng</option>
+                    </select>
+                </div>
+                <p id="datdinhkyError" class="errorRed"></p>
+                <div>
+                    <label>Dịch vụ khác:</label>
+                    <select id="dichvu" name="dichvu">
+                        <option value="">--- Chọn dịch vụ ---</option>
+                        <option value="nuocfree">Nước uống free</option>
+                        <option value="dongphuc">Đồng phục thi đấu(300k/đội)</option>
+                        <option value="trongtai">Thuê trọng tài(200k/h)</option>
+                    </select>
+                </div>
+                <h3>Tổng số tiền:</h3>
+                <input type="submit" value="Hoàn thành" id="button" class="button">
+
+                <p id="sotien"></p>
+            </form>
+        </div>
+       
+    </main><script src="./javascript/book.js"></script>
+</body>
+</html>
