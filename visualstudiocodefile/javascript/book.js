@@ -1,5 +1,5 @@
-function validate(e) {
-    e.preventDefault();
+function validate(event) {
+    event.preventDefault();
     var name = document.getElementById("name").value
     var errorName = document.getElementById("errorName");
 
@@ -44,9 +44,9 @@ function validate(e) {
         nguoichoiError.innerText = "Hãy nhập số người chơi."
     }
     else nguoichoiError = ""
-    
+
     var doichoi = document.getElementById("doichoi").value
-    var doichoiError = document.getElementById("doichoiError").value
+    var doichoiError = document.getElementById("doichoiError")
     if (doichoi == "") {
         doichoiError.innerText = "Hãy nhập số người chơi."
     }
@@ -54,6 +54,28 @@ function validate(e) {
         doichoiError.innerText = "Chỉ được phép nhập số nguyên dương."
     }
     else doichoiError.innerText = ""
-    
-    console.log ("Chỉ được phép nhập số nguyên dương.")
+
+    var dichvu = document.getElementById("dichvu").value
+    var dongphuc = 0
+    var trongtai = 0
+    if (dichvu == "dongphuc") {
+        dongphuc = 300000
+    }
+    else if (dichvu == "trongtai") {
+        trongtai = 200000
+    }
+    khunggio = parseInt(khunggio)
+    giothuesan = parseInt(giothuesan)
+    doichoi = parseInt(doichoi)
+    //calculation
+    // Tiền sân = Giá tiền theo khung giờ * Số giờ.
+    // Nếu chọn thuê Đồng phục thi đấu, tính Tiền đồng phục = Số đội chơi * Đồng phục thi đấu (300k/đội)
+    // Nếu chọn thuê Trọng tài, tính Tiền thuê trọng tài = Số giờ * Thuê trọng tài (200k/h)
+    // Tổng tiền = Tiền sân + Tiền đồng phục (nếu có) + Tiền thuê trọng tài (nếu có)
+    var tiensan = khunggio * giothuesan
+    var tiendongphuc = doichoi * dongphuc
+    trongtai = khunggio * trongtai
+    var tongtien = tiensan + tiendongphuc + trongtai
+    document.getElementById("sotien").innerHTML = tongtien
+
 }
