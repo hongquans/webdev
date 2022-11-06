@@ -1,6 +1,7 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 #footer {
     word-wrap: inherit;
     column-count: 4;
@@ -39,12 +40,10 @@ body {
 
 #header1 {
     column-count: 3;
-    width: 1000px;
-    height: 100px;
+    width: calc(100vw - 30px);
+    /* height: 130px; */
     background-color: rgba(255, 119, 0, 0.9);
     padding: 30px;
-    width: 1200px;
-    height: 130px;
     border-radius: 25px;
 }
 
@@ -86,8 +85,28 @@ h1 {
     color: red;
 }
 
-label {
+/* label {
     width: 150px;
     padding-right: 100px;
-    display:inline-flex;
-  }
+    display: inline-flex;
+} */
+
+
+/*
+  Flex tester
+  */
+
+.flex-box {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    /* justify-content: baseline; */
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
