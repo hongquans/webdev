@@ -3,7 +3,7 @@ function validate(event) {
     var name = document.getElementById("name").value
     var errorName = document.getElementById("errorName");
 
-    if (name == "") {
+    if (name === "") {
         errorName.innerText = "Hãy điền tên của bạn.";
     }
     else if (name.length > 50) {
@@ -13,7 +13,7 @@ function validate(event) {
 
     var sdt = document.getElementById("sdt").value;
     var phoneError = document.getElementById("errorPhone");
-    if (sdt == "") {
+    if (sdt === "") {
         phoneError.innerText = "Hãy điền số điện thoại của bạn.";
     }
     else if (sdt.length > 50) {
@@ -23,14 +23,14 @@ function validate(event) {
 
     var khunggio = document.getElementById("khunggio").value;
     var khunggioError = document.getElementById("errorKhunggio");
-    if (khunggio == "") {
+    if (khunggio === "") {
         khunggioError.innerText = "Hãy chọn khung giờ muốn đặt sân.";
     }
     else khunggioError.innerText = "";
 
     var giothuesan = document.getElementById("giothuesan").value
     var giothuesanError = document.getElementById("giothuesanError");
-    if (giothuesan == "") {
+    if (giothuesan === "") {
         giothuesanError.innerText = "Hãy nhập số giờ muốn đặt sân.";
     }
     else if (giothuesan < 0) {
@@ -40,14 +40,14 @@ function validate(event) {
 
     var nguoichoi = document.getElementById("nguoichoi").value
     var nguoichoiError = document.getElementById("nguoichoiError")
-    if (nguoichoi == "") {
+    if (nguoichoi === "") {
         nguoichoiError.innerText = "Hãy nhập số người chơi."
     }
     else nguoichoiError = ""
 
     var doichoi = document.getElementById("doichoi").value
     var doichoiError = document.getElementById("doichoiError")
-    if (doichoi == "") {
+    if (doichoi === "") {
         doichoiError.innerText = "Hãy nhập số người chơi."
     }
     else if (doichoi < 0) {
@@ -58,10 +58,10 @@ function validate(event) {
     var dichvu = document.getElementById("dichvu").value
     var dongphuc = 0
     var trongtai = 0
-    if (dichvu == "dongphuc") {
+    if (dichvu === "dongphuc") {
         dongphuc = 300000
     }
-    else if (dichvu == "trongtai") {
+    else if (dichvu === "trongtai") {
         trongtai = 200000
     }
     khunggio = parseInt(khunggio)
