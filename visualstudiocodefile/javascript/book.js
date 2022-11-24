@@ -79,3 +79,58 @@ function validate(event) {
     document.getElementById("sotien").innerHTML = tongtien
 
 }
+function validatename(e){
+    let name=e.target.value
+    var errorName = document.getElementById("errorName");
+
+    if (name === "") {
+        errorName.innerText = "Hãy điền tên của bạn.";
+    }
+    else if (name.length > 50) {
+        errorName.innerText = "Tên không dài quá 50 kí tự.";
+    }
+    else errorName.innerText = "";
+}
+function validatephone(e){
+    let sdt=e.target.value
+    // var sdt = document.getElementById("sdt").value;
+    var phoneError = document.getElementById("errorPhone");
+    if (sdt === "") {
+        phoneError.innerText = "Hãy điền số điện thoại của bạn.";
+    }
+    else if (sdt.length > 50) {
+        phoneError.innerText = "Số điện thoại không dài quá 50 kí tự.";
+    }
+    else phoneError.innerText = "";
+}
+
+function validategiothuesan(e){
+    let giothuesan=e.target.value
+    var giothuesanError = document.getElementById("giothuesanError");
+    if (giothuesan === "") {
+        giothuesanError.innerText = "Hãy nhập số giờ muốn đặt sân.";
+    }
+    else if (giothuesan < 0) {
+        giothuesanError.innerText = "Chỉ được phép nhập số dương.";
+    }
+    else giothuesanError.innerText = "";
+}
+
+function validatenguoichoi(e){
+    let nguoichoi=e.target.value
+    var nguoichoiError = document.getElementById("nguoichoiError")
+    if (nguoichoi === "") {
+        nguoichoiError.innerText = "Hãy nhập số người chơi."
+    }
+    else nguoichoiError = ""
+}
+
+function validatedoichoi(e){
+    let doichoi=e.target.value
+    var nguoichoiError = document.getElementById("nguoichoiError")
+    if (nguoichoi === "") {
+        nguoichoiError.innerText = "Hãy nhập số người chơi."
+    }
+    else nguoichoiError = ""
+
+}

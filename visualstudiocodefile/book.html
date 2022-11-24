@@ -15,20 +15,35 @@
     <main>
         <header id="header1">
             <nav class="flex-box">
-                <div class="icon-wrapper">
+                <div>
+
                     <a href="index.html">
                         <img src="images/football.png" alt="trang chủ" width="100px">
                     </a>
                 </div>
                 <div class="box">
+
                     <a href="index.html" class="menu-item">Trang chủ</a>
                     <a href="gioithieu.html" target="_self" class="menu-item">Giới thiệu</a>
                     <a href="chitiet.html" target="_self" class="menu-item"> Tìm sân</a>
-                    <a href="book.html" target="_self" class="menu-item"> Đặt sân</a>
-                </div>
+                     </div>
+                <!-- <a href="index.html">
+                    <img src="images/football.png" alt="trang chủ" width="100px">
+                </a>
+                <div class="flex-container">
+                    <div class="box">
+                        <a href="index.html" class="menu-item">Trang chủ</a>
+                        <a href="gioithieu.html" target="_self" class="menu-item">Giới thiệu</a>
+                        <a href="chitiet.html" target="_self" class="menu-item"> Tìm sân</a>
+                        <a href="book.html" target="_self" class="menu-item"> Đặt sân</a>
+                    </div>
+                </div> -->
             </nav>
         </header>
-
+        <br>
+        <br>
+        <br>
+        <br>
         <div id="form">
             <form onsubmit="validate(event)">
                 <div>
@@ -42,27 +57,28 @@
                     <br>
                     <div class="form-wrapper">
                         <label for="name">Tên của bạn</label>
-                        <input type="text" name="name" id="name">
+                        <input type="text" name="name" id="name" onblur="validatename(event)">
                     </div>
                     <p id="errorName" class="errorRed"></p>
 
                     <div class="form-wrapper">
-
+                        
                         <label for="sdt">Số điện thoại của bạn:</label>
-                        <input type="tel" name="sdt" id="sdt" maxlength="10">
+                        <input type="tel" name="sdt" id="sdt" maxlength="10" onblur="validatephone(event)">
                     </div>
-                    <p id="errorPhone" class="errorRed"></p>
+                    <p id="errorPhone" class="errorRed"></p>  
 
                     <div class="form-wrapper">
 
                         <label for="khunggio">Chọn khung giờ:</label>
-                        <select id="khunggio" name="khunggio" id="khunggio">
+                        <select id="khunggio" name="khunggio" id="khunggio" onblur="validatekhunggio(event)>
                             <option value="">--- Chọn khung giờ ---</option>
                             <option value="200000">6h-16h : 200k</option>
                             <option value="300000">16h-17h30p : 300k</option>
                             <option value="700000">17h30p-20h20p : 700k</option>
                             <option value="300000">20h30p-22h : 300k</option>
                         </select>
+                
                     </div>
                     <p id="errorKhunggio" class="errorRed"></p>
                     <br>
@@ -75,7 +91,7 @@
 
                     <div class="form-wrapper">
                         <label>Số người chơi dự kiến:</label>
-                        <input type="number" name="nguoichoi" id="nguoichoi">
+                        <input type="number" name="nguoichoi" id="nguoichoi" min="2" max="30">
                     </div>
                     <p id="nguoichoiError" class="errorRed"></p>
                     <div class="form-wrapper">
