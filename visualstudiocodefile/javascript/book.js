@@ -47,7 +47,7 @@ function validate(event) {
 
     var doichoi = document.getElementById("doichoi").value
     var doichoiError = document.getElementById("doichoiError")
-    if (doichoi === "") {
+    if (doichoi == "") {
         doichoiError.innerText = "Hãy nhập số người chơi."
     }
     else if (doichoi < 0) {

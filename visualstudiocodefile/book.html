@@ -7,8 +7,8 @@
     <title>Đặt sân</title>
     <link rel="icon" type="images/football.png" href="images/football.png">
     <link rel="stylesheet" href="css/styles.css">
-
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
 
 <body>
     <p id="dautrang"></p>
@@ -45,8 +45,6 @@
         <br>
         <br>
         <div id="form">
-
-
             <form onsubmit="validate(event)">
                 <div>
                     <h1>Thuê sân</h1>
@@ -92,7 +90,7 @@
 
                     <div class="form-wrapper">
                         <label>Số người chơi dự kiến:</label>
-                        <input type="number" name="nguoichoi" id="nguoichoi" min="7" max="11">
+                        <input type="number" name="nguoichoi" id="nguoichoi">
                     </div>
                     <p id="nguoichoiError" class="errorRed"></p>
                     <div class="form-wrapper">
@@ -130,7 +128,7 @@
         </div>
 
     </main>
-    <script src="./javascript/book.js"></script>
+       <script src="./javascript/book.js"></script>
 </body>
 
 </html>
